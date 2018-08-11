@@ -25,30 +25,58 @@ public class Player : MonoBehaviour
     public void Give(Carryable obj)
     {
         print("Give");
-        if (!carrySomething || _carriedObject.IsSeed)
+        if (!carrySomething || (carrySomething && _carriedObject.IsSeed))
         {
-            print("New carrying");
-            DiscardSeed();
-            _carriedObject = Instantiate(obj, CarryTarget.position, Quaternion.identity);
-            _carriedObject.transform.SetParent(CarryTarget);
-            carrySomething = true;
+            if (obj.IsSeed)
+            {
+                print("Carrying new seed");
+                DiscardItem();
+                _carriedObject = Instantiate(obj, CarryTarget.position, Quaternion.identity);
+                _carriedObject.transform.SetParent(CarryTarget);
+                carrySomething = true;
+            }
+            else
+            {
+                print("Carrying new plant");
+                Plant plant = obj as Plant;
+                _carriedObject = plant;
+                plant.Harvest();
+                plant.transform.SetParent(CarryTarget);
+                plant.transform.localPosition = Vector3.zero;
+                plant.transform.localScale *= 2f;
+                carrySomething = true;
+            }
         }
     }
 
     public Seed GetSeed()
     {
         print(_carriedObject);
-        if (_carriedObject.IsSeed)
-            return _carriedObject as Seed;
-        else
-            return null;
+        if (_carriedObject != null)
+        {
+            if (_carriedObject.IsSeed)
+                return _carriedObject as Seed;
+        }
+        return null;
     }
 
-    public void DiscardSeed()
+    public Plant GetPlant()
     {
-        if (_carriedObject != null && _carriedObject.IsSeed)
+        print(_carriedObject);
+        if (_carriedObject != null)
+        {
+            if (!_carriedObject.IsSeed)
+                return _carriedObject as Plant;
+        }
+        return null;
+    }
+
+    public void DiscardItem()
+    {
+        if (_carriedObject != null)
         {
             Destroy(_carriedObject.gameObject);
+            carrySomething = false;
         }
     }
 }

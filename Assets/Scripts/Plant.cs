@@ -19,7 +19,7 @@ public class Plant : Carryable
     {
         IsSeed = false;
         _filter = GetComponent<MeshFilter>();
-        _currentMeshIndex = 0;
+        _currentMeshIndex = -1;
         Grow();
     }
 
@@ -34,15 +34,21 @@ public class Plant : Carryable
 
     private void Grow()
     {
-        if (_currentMeshIndex == meshes.Length)
-        {
-            _readyToHarvest = true;
-        }
-        else
+        if (!_readyToHarvest)
         {
             _currentMeshIndex++;
-            _filter.mesh = meshes[_currentMeshIndex - 1];
-            _nextGrowTime = Time.time + (GrowTime / meshes.Length);
+            _filter.mesh = meshes[_currentMeshIndex];
+            _nextGrowTime = Time.time + (GrowTime / meshes.Length - 1);
+            if (_currentMeshIndex == meshes.Length - 1)
+            {
+                _readyToHarvest = true;
+            }
         }
     }
+
+    public void Harvest()
+    {
+        _filter.mesh = meshes[0];
+    }
+
 }

@@ -8,12 +8,13 @@ public class Dispencer : MonoBehaviour, IClickableObj {
     public Carryable SeedPrefab;
 
     private Material _material;
+    private Color _originalColor;
     private int _currentIndex = 0;
     private Player _player;
 
 	// Use this for initialization
 	void Start () {
-        _material = GetComponent<Renderer>().material;
+        _material = GetComponent<Renderer>().materials[3];
         _player = FindObjectOfType<Player>();
         UpdateColor();
     }
@@ -37,6 +38,7 @@ public class Dispencer : MonoBehaviour, IClickableObj {
     public void Select()
     {
         SeedPrefab.Type = Seeds[_currentIndex];
+        SeedPrefab.IsSeed = true;
         _player.Give(SeedPrefab);
     }
 

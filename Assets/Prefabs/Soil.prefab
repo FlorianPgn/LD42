@@ -51,13 +51,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244961051423538}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066901796191678}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4066901796191678
 Transform:
   m_ObjectHideFlags: 1
@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1068365471928172}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 11, y: 0.01, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12, y: 0.01, z: -1}
+  m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children:
   - {fileID: 4021992017155720}
   m_Father: {fileID: 0}
@@ -143,12 +143,12 @@ MonoBehaviour:
   PlantationPoint: {fileID: 4021992017155720}
   PlantTypes:
   - Type: 2
-    Plant: {fileID: 114410160526247932, guid: 13043764ac6b94047a78e8e9d17fea7a, type: 2}
+    Plant: {fileID: 114787701367887820, guid: a0ae3d48558c46d49a931efa4f11182c, type: 2}
   - Type: 0
+    Plant: {fileID: 114445707113434242, guid: 848ef6027c5d60e4a9c2e8c8b760da52, type: 2}
+  - Type: 4
+    Plant: {fileID: 114284554587423952, guid: 9d8c6fce421a3154e9211a34fcfe2320, type: 2}
+  - Type: 1
     Plant: {fileID: 0}
-  - Type: 0
-    Plant: {fileID: 0}
-  - Type: 0
-    Plant: {fileID: 0}
-  - Type: 0
+  - Type: 1
     Plant: {fileID: 0}
