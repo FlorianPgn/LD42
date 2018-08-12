@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
                 plant.Harvest();
                 plant.transform.SetParent(CarryTarget);
                 plant.transform.localPosition = Vector3.zero;
-                plant.transform.localScale *= 2f;
+                plant.transform.localScale *= 3f;
                 carrySomething = true;
             }
             return true;

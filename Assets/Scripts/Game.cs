@@ -14,7 +14,7 @@ public class Game : MonoBehaviour
     }
     public Upgrade[] Upgrades;
 
-    public GameObject[] SpaceshipUpgrades;
+    public GameObject Spaceship;
 
     public Jauge EnergyJauge;
     public Jauge OxygenJauge;
@@ -141,14 +141,14 @@ public class Game : MonoBehaviour
     {
         _nbMetal -= Upgrades[_currentUpgradeGoal].NbMetal;
         _nbCrystal -= Upgrades[_currentUpgradeGoal].NbCrystal;
-        SpawnSpaceshipPart(SpaceshipUpgrades[_currentUpgradeGoal]);
         _currentUpgradeGoal++;
+        SpawnSpaceshipPart(_currentUpgradeGoal);
         UpdateUpgradeUI();
     }
 
-    private void SpawnSpaceshipPart(GameObject part)
+    private void SpawnSpaceshipPart(int partId)
     {
-        part.GetComponent<Animator>().SetTrigger("Spawn");
+        Spaceship.GetComponent<Animator>().SetTrigger("SpawnR"+_currentUpgradeGoal);
     }
 
     public void DisplayNeedEnergy()
