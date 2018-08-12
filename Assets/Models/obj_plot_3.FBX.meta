@@ -8,11 +8,19 @@ ModelImporter:
     100004: obj_plot_3_soil_1
     100006: obj_plot_3_soil_2
     100008: obj_plot_3_soil_3
+    100010: obj_soil010
+    100012: obj_soil011
+    100014: obj_soil012
+    100016: obj_soil_plot_3
     400000: //RootNode
     400002: obj_plot_3
     400004: obj_plot_3_soil_1
     400006: obj_plot_3_soil_2
     400008: obj_plot_3_soil_3
+    400010: obj_soil010
+    400012: obj_soil011
+    400014: obj_soil012
+    400016: obj_soil_plot_3
     2100000: m_soil
     2100002: m_gray
     2100004: m_black
@@ -20,14 +28,26 @@ ModelImporter:
     2300002: obj_plot_3_soil_1
     2300004: obj_plot_3_soil_2
     2300006: obj_plot_3_soil_3
+    2300008: obj_soil010
+    2300010: obj_soil011
+    2300012: obj_soil012
+    2300014: obj_soil_plot_3
     3300000: obj_plot_3
     3300002: obj_plot_3_soil_1
     3300004: obj_plot_3_soil_2
     3300006: obj_plot_3_soil_3
+    3300008: obj_soil010
+    3300010: obj_soil011
+    3300012: obj_soil012
+    3300014: obj_soil_plot_3
     4300000: obj_plot_3_soil_1
     4300002: obj_plot_3_soil_3
     4300004: obj_plot_3_soil_2
     4300006: obj_plot_3
+    4300008: obj_soil010
+    4300010: obj_soil011
+    4300012: obj_soil012
+    4300014: obj_soil_plot_3
   externalObjects: {}
   materials:
     importMaterials: 1

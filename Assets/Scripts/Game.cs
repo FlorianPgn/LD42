@@ -1,15 +1,39 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    [System.Serializable]
+    public struct Upgrade
+    {
+        public int NbMetal;
+        public int NbCrystal;
+    }
+    public Upgrade[] Upgrades;
+
+    public GameObject[] SpaceshipUpgrades;
 
     public Jauge EnergyJauge;
     public Jauge OxygenJauge;
+    public Text MetalGoal;
+    public Text CrystalGoal;
+    public Button UpgradeBtn;
 
     private const int ENERGY_MAX_VALUE = 200;
     private const int OXYGEN_MAX_VALUE = 100;
+
+    private const int OXYGEN_COST = 20;
+    private const int CRYSTAL_COST = 30;
+    private const int METAL_COST = 20;
+
+    private const float OXYGEN_DECAY_DELAY_IN_S = 1f;
+
+    private int _nbMetal;
+    private int _nbCrystal;
+    private int _currentUpgradeGoal;
 
     private void Start()
     {
@@ -17,6 +41,22 @@ public class Game : MonoBehaviour
         EnergyJauge.TargetAmount = 0;
         OxygenJauge.MaxValue = OXYGEN_MAX_VALUE;
         OxygenJauge.TargetAmount = OXYGEN_MAX_VALUE;
+        UpgradeBtn.interactable = false;
+        UpgradeBtn.onClick.AddListener(UpgradeSpaceship);
+        _currentUpgradeGoal = 0;
+        UpdateUpgradeUI();
+        StartCoroutine(OxygenDecay());
+    }
+
+    private IEnumerator OxygenDecay()
+    {
+        WaitForSeconds delay = new WaitForSeconds(OXYGEN_DECAY_DELAY_IN_S);
+        while (OxygenJauge.TargetAmount > 0)
+        {
+            OxygenJauge.TargetAmount--;
+            yield return delay;
+        }
+        GameOver();
     }
 
     public void AddEnergy(int quantity)
@@ -31,15 +71,100 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void AddOxygen(int quantity)
+    public bool AddOxygen(int quantity)
     {
-        if (OxygenJauge.TargetAmount + quantity > OXYGEN_MAX_VALUE)
+        if (OXYGEN_COST > EnergyJauge.TargetAmount)
         {
-            OxygenJauge.TargetAmount = OXYGEN_MAX_VALUE;
+            return false;
         }
         else
         {
-            OxygenJauge.TargetAmount += quantity;
+            EnergyJauge.TargetAmount -= OXYGEN_COST;
+            if (OxygenJauge.TargetAmount + quantity > OXYGEN_MAX_VALUE)
+            {
+                OxygenJauge.TargetAmount = OXYGEN_MAX_VALUE;
+            }
+            else
+            {
+                OxygenJauge.TargetAmount += quantity;
+            }
+            return true;
+        }
+
+    }
+
+    public bool AddMetal()
+    {
+        if (METAL_COST > EnergyJauge.TargetAmount)
+        {
+            return false;
+        }
+        else
+        {
+            EnergyJauge.TargetAmount -= METAL_COST;
+            _nbMetal += 1;
+            UpdateUpgradeUI();
+            return true;
         }
     }
+
+    public bool AddCrystal()
+    {
+        if (CRYSTAL_COST > EnergyJauge.TargetAmount)
+        {
+            return false;
+        }
+        else
+        {
+            EnergyJauge.TargetAmount -= CRYSTAL_COST;
+            _nbCrystal += 1;
+            UpdateUpgradeUI();
+            return true;
+        }
+    }
+
+    public void UpdateUpgradeUI()
+    {
+        if (_nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal)
+        {
+            MetalGoal.color = Color.green;
+        }
+        if (_nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal)
+        {
+            CrystalGoal.color = Color.green;
+        }
+        if (_nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal)
+        {
+            UpgradeBtn.interactable = true;
+        }
+        else
+        {
+            UpgradeBtn.interactable = false;
+            MetalGoal.color = Color.black;
+            CrystalGoal.color = Color.black;
+        }
+
+        MetalGoal.text = "Metal : " + _nbMetal + " / " + Upgrades[_currentUpgradeGoal].NbMetal;
+        CrystalGoal.text = "Crystal : " + _nbCrystal + " / " + Upgrades[_currentUpgradeGoal].NbCrystal;
+    }
+
+    public void UpgradeSpaceship()
+    {
+        _nbMetal -= Upgrades[_currentUpgradeGoal].NbMetal;
+        _nbCrystal -= Upgrades[_currentUpgradeGoal].NbCrystal;
+        SpaceshipUpgrades[_currentUpgradeGoal].SetActive(true);
+        _currentUpgradeGoal++;
+        UpdateUpgradeUI();
+    }
+
+    public void DisplayNeedEnergy()
+    {
+        Debug.Log("NEED MORE ENERGY");
+    }
+
+    private void GameOver()
+    {
+        Debug.Log("GAME OVER");
+    }
+
 }

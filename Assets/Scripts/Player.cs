@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void Give(Carryable obj)
+    public bool Give(Carryable obj)
     {
         print("Give");
         if (!carrySomething || (carrySomething && _carriedObject.IsSeed))
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
             {
                 print("Carrying new seed");
                 DiscardItem();
-                _carriedObject = Instantiate(obj, CarryTarget.position, Quaternion.identity);
+                _carriedObject = Instantiate(obj, CarryTarget.position, Quaternion.Euler(Vector3.right * -90));
                 _carriedObject.transform.SetParent(CarryTarget);
                 carrySomething = true;
             }
@@ -46,7 +46,9 @@ public class Player : MonoBehaviour
                 plant.transform.localScale *= 2f;
                 carrySomething = true;
             }
+            return true;
         }
+        return false;
     }
 
     public Seed GetSeed()

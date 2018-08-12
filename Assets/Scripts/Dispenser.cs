@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dispencer : MonoBehaviour, IClickableObj {
+public class Dispenser : MonoBehaviour, IClickableObj {
 
     public Carryable.SeedType[] Seeds;
     public Carryable SeedPrefab;
+    public Color SelectedColor;
 
     private Material _material;
+    private Material _materialHover;
     private Color _originalColor;
     private int _currentIndex = 0;
     private Player _player;
@@ -15,6 +17,8 @@ public class Dispencer : MonoBehaviour, IClickableObj {
 	// Use this for initialization
 	void Start () {
         _material = GetComponent<Renderer>().materials[3];
+        _materialHover = GetComponent<Renderer>().materials[0];
+        _originalColor = _materialHover.color;
         _player = FindObjectOfType<Player>();
         UpdateColor();
     }
@@ -32,7 +36,7 @@ public class Dispencer : MonoBehaviour, IClickableObj {
 
     public void Enter()
     {
-       
+        _materialHover.color = SelectedColor;
     }
 
     public void Select()
@@ -44,6 +48,6 @@ public class Dispencer : MonoBehaviour, IClickableObj {
 
     public void Exit()
     {
-       
+        _materialHover.color = _originalColor;
     }
 }

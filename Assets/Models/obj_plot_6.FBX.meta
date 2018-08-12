@@ -11,6 +11,13 @@ ModelImporter:
     100010: obj_plot_6_soil_4
     100012: obj_plot_6_soil_5
     100014: obj_plot_6_soil_6
+    100016: obj_soil
+    100018: obj_soil001
+    100020: obj_soil002
+    100022: obj_soil003
+    100024: obj_soil004
+    100026: obj_soil005
+    100028: obj_soil_plot_6
     400000: //RootNode
     400002: obj_plot_6
     400004: obj_plot_6_soil_1
@@ -19,6 +26,13 @@ ModelImporter:
     400010: obj_plot_6_soil_4
     400012: obj_plot_6_soil_5
     400014: obj_plot_6_soil_6
+    400016: obj_soil
+    400018: obj_soil001
+    400020: obj_soil002
+    400022: obj_soil003
+    400024: obj_soil004
+    400026: obj_soil005
+    400028: obj_soil_plot_6
     2100000: m_gray
     2100002: m_black
     2100004: m_soil
@@ -29,6 +43,13 @@ ModelImporter:
     2300008: obj_plot_6_soil_4
     2300010: obj_plot_6_soil_5
     2300012: obj_plot_6_soil_6
+    2300014: obj_soil
+    2300016: obj_soil001
+    2300018: obj_soil002
+    2300020: obj_soil003
+    2300022: obj_soil004
+    2300024: obj_soil005
+    2300026: obj_soil_plot_6
     3300000: obj_plot_6
     3300002: obj_plot_6_soil_1
     3300004: obj_plot_6_soil_2
@@ -36,6 +57,13 @@ ModelImporter:
     3300008: obj_plot_6_soil_4
     3300010: obj_plot_6_soil_5
     3300012: obj_plot_6_soil_6
+    3300014: obj_soil
+    3300016: obj_soil001
+    3300018: obj_soil002
+    3300020: obj_soil003
+    3300022: obj_soil004
+    3300024: obj_soil005
+    3300026: obj_soil_plot_6
     4300000: obj_plot_6
     4300002: obj_plot_6_soil_2
     4300004: obj_plot_6_soil_1
@@ -43,6 +71,13 @@ ModelImporter:
     4300008: obj_plot_6_soil_3
     4300010: obj_plot_6_soil_6
     4300012: obj_plot_6_soil_5
+    4300014: obj_soil_plot_6
+    4300016: obj_soil
+    4300018: obj_soil001
+    4300020: obj_soil002
+    4300022: obj_soil003
+    4300024: obj_soil004
+    4300026: obj_soil005
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -9,12 +9,22 @@ ModelImporter:
     100006: obj_plot_4_soil_2
     100008: obj_plot_4_soil_3
     100010: obj_plot_4_soil_4
+    100012: obj_soil006
+    100014: obj_soil007
+    100016: obj_soil008
+    100018: obj_soil009
+    100020: obj_soil_plot_4
     400000: //RootNode
     400002: obj_plot_4
     400004: obj_plot_4_soil_1
     400006: obj_plot_4_soil_2
     400008: obj_plot_4_soil_3
     400010: obj_plot_4_soil_4
+    400012: obj_soil006
+    400014: obj_soil007
+    400016: obj_soil008
+    400018: obj_soil009
+    400020: obj_soil_plot_4
     2100000: m_soil
     2100002: m_gray
     2100004: m_black
@@ -23,16 +33,31 @@ ModelImporter:
     2300004: obj_plot_4_soil_2
     2300006: obj_plot_4_soil_3
     2300008: obj_plot_4_soil_4
+    2300010: obj_soil006
+    2300012: obj_soil007
+    2300014: obj_soil008
+    2300016: obj_soil009
+    2300018: obj_soil_plot_4
     3300000: obj_plot_4
     3300002: obj_plot_4_soil_1
     3300004: obj_plot_4_soil_2
     3300006: obj_plot_4_soil_3
     3300008: obj_plot_4_soil_4
+    3300010: obj_soil006
+    3300012: obj_soil007
+    3300014: obj_soil008
+    3300016: obj_soil009
+    3300018: obj_soil_plot_4
     4300000: obj_plot_4_soil_2
     4300002: obj_plot_4_soil_1
     4300004: obj_plot_4_soil_4
     4300006: obj_plot_4_soil_3
     4300008: obj_plot_4
+    4300010: obj_soil006
+    4300012: obj_soil007
+    4300014: obj_soil008
+    4300016: obj_soil009
+    4300018: obj_soil_plot_4
   externalObjects: {}
   materials:
     importMaterials: 1

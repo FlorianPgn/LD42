@@ -2,24 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DispencerBtn : MonoBehaviour, IClickableObj {
-
-    public Dispenser Dispencer;
-    public Color SelectedColor;
-
+public class Trash : MonoBehaviour
+{
     private Material _material;
     private Color _originalColor;
+    private Player _player;
+
+    public Color SelectedColor;
 
     // Use this for initialization
-    void Start () {
-        _material = GetComponent<Renderer>().materials[1];
+    private void Start()
+    {
+        _material = GetComponent<Renderer>().material;
         _originalColor = _material.color;
+        _player = FindObjectOfType<Player>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void Enter()
     {
@@ -33,6 +30,6 @@ public class DispencerBtn : MonoBehaviour, IClickableObj {
 
     public void Select()
     {
-        Dispencer.NextSeed();
+        _player.DiscardItem();
     }
 }

@@ -7,11 +7,11 @@ public class Jauge : MonoBehaviour
 {
 
     public Image Bar;
-    public float Speed = 0.01f;
+    public float Speed = 0.05f;
     public int MaxValue;
     public int TargetAmount;
 
-    private float _currentAmount = 100f;
+    private float _CurrentAmount = 100f;
     private float _nextUpdate;
 
 
@@ -33,10 +33,10 @@ public class Jauge : MonoBehaviour
             if (Time.time > _nextUpdate)
             {
                 _nextUpdate = Time.time + Speed;
-                if (_currentAmount != TargetAmount)
+                if (_CurrentAmount != TargetAmount)
                 {
-                    _currentAmount += (_currentAmount > TargetAmount ? -1 : 1);
-                    Bar.fillAmount = _currentAmount / MaxValue;
+                    _CurrentAmount += (_CurrentAmount > TargetAmount ? -0.25f : 0.25f);
+                    Bar.fillAmount = Mathf.Floor(_CurrentAmount) / MaxValue;
                 }
             }
             yield return null;

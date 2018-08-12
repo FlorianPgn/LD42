@@ -7,6 +7,7 @@ public class Plant : Carryable
 {
 
     public Mesh[] meshes;
+    public Mesh HarvestMesh;
     public float GrowTime;
 
     private MeshFilter _filter;
@@ -48,7 +49,7 @@ public class Plant : Carryable
 
     public void Harvest()
     {
-        _filter.mesh = meshes[0];
+        _filter.mesh = HarvestMesh;
     }
 
 }

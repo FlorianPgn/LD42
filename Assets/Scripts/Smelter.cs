@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grinder : MonoBehaviour, IClickableObj {
-
+public class Smelter : MonoBehaviour
+{
     private Material _material;
     private Color _originalColor;
     private Player _player;
@@ -12,18 +12,13 @@ public class Grinder : MonoBehaviour, IClickableObj {
     public Color SelectedColor;
 
     // Use this for initialization
-
-    private void Start () {
+    private void Start()
+    {
         _material = GetComponent<Renderer>().materials[1];
         _originalColor = _material.color;
         _player = FindObjectOfType<Player>();
         _game = FindObjectOfType<Game>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void Enter()
     {
@@ -38,20 +33,13 @@ public class Grinder : MonoBehaviour, IClickableObj {
     public void Select()
     {
         Plant playerPlant = _player.GetPlant();
-        if (playerPlant != null) {
-            if (playerPlant.Type.plant == Carryable.PlantType.ENERGY)
+        if (playerPlant != null)
+        {
+            if (playerPlant.Type.plant == Carryable.PlantType.METAL)
             {
-                _game.AddEnergy(40);
-                _player.DiscardItem();
-            }
-            if (playerPlant.Type.plant == Carryable.PlantType.OXYGEN)
-            {
-                if(_game.AddOxygen(20))
+                if (_game.AddMetal())
                 {
                     _player.DiscardItem();
-                } else
-                {
-                    _game.DisplayNeedEnergy();
                 }
             }
         }

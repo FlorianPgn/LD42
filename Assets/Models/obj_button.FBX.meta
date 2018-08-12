@@ -1,43 +1,15 @@
 fileFormatVersion: 2
-guid: bfc962945890d244b9ae31fabbde2cf8
+guid: 85ff28dd31d3b0344b341c669d565b4e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: obj_plot_2
-    100004: obj_plot_2_soil_1
-    100006: obj_plot_2_soil_2
-    100008: obj_soil013
-    100010: obj_soil014
-    100012: obj_soil_plot_2
     400000: //RootNode
-    400002: obj_plot_2
-    400004: obj_plot_2_soil_1
-    400006: obj_plot_2_soil_2
-    400008: obj_soil013
-    400010: obj_soil014
-    400012: obj_soil_plot_2
-    2100000: m_soil
-    2100002: m_gray
-    2100004: m_black
-    2300000: obj_plot_2
-    2300002: obj_plot_2_soil_1
-    2300004: obj_plot_2_soil_2
-    2300006: obj_soil013
-    2300008: obj_soil014
-    2300010: obj_soil_plot_2
-    3300000: obj_plot_2
-    3300002: obj_plot_2_soil_1
-    3300004: obj_plot_2_soil_2
-    3300006: obj_soil013
-    3300008: obj_soil014
-    3300010: obj_soil_plot_2
-    4300000: obj_plot_2_soil_1
-    4300002: obj_plot_2_soil_2
-    4300004: obj_plot_2
-    4300006: obj_soil013
-    4300008: obj_soil014
-    4300010: obj_soil_plot_2
+    2100000: m_gray
+    2100002: m_black
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: obj_button
   externalObjects: {}
   materials:
     importMaterials: 1

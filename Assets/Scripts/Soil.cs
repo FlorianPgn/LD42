@@ -56,8 +56,10 @@ public class Soil : MonoBehaviour, IClickableObj
 
     private void TakePlant()
     {
-        _player.Give(_growingPlant);
-        _hasPlant = false;
+        if(_player.Give(_growingPlant))
+        {
+            _hasPlant = false;
+        }
     }
 
     public void Select()
