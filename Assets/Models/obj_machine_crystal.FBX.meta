@@ -12,7 +12,27 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: obj_machine_crystal
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_black
+    second: {fileID: 2100000, guid: 188e84b5a637e204d9c059078db47f98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_energy
+    second: {fileID: 2100000, guid: d9af69fa693046a48afae24bb338762b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_glass
+    second: {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_gray
+    second: {fileID: 2100000, guid: 4f46139d0e61b4747a9747a502cd556b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

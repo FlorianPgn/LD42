@@ -152,7 +152,27 @@ ModelImporter:
     4300048: obj_spaceship_base_door_1_R
     4300050: obj_spaceship_base_door_2_R
     4300052: obj_spaceship_base_floor
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_black
+    second: {fileID: 2100000, guid: 188e84b5a637e204d9c059078db47f98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_floor
+    second: {fileID: 2100000, guid: 077a9a94342b074419b0ba9d7cf94707, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_glass
+    second: {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_gray
+    second: {fileID: 2100000, guid: 4f46139d0e61b4747a9747a502cd556b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
