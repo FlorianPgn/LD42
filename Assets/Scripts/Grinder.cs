@@ -41,12 +41,12 @@ public class Grinder : MonoBehaviour, IClickableObj {
         if (playerPlant != null) {
             if (playerPlant.Type.plant == Carryable.PlantType.ENERGY)
             {
-                _game.AddEnergy(40);
+                _game.AddEnergy(50);
                 _player.DiscardItem();
             }
             if (playerPlant.Type.plant == Carryable.PlantType.OXYGEN)
             {
-                if(_game.AddOxygen(20))
+                if(_game.AddOxygen(40))
                 {
                     _player.DiscardItem();
                 } else

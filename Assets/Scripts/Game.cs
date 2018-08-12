@@ -125,24 +125,12 @@ public class Game : MonoBehaviour
 
     public void UpdateUpgradeUI()
     {
-        if (_nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal)
-        {
-            MetalGoal.color = Color.green;
-        }
-        if (_nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal)
-        {
-            CrystalGoal.color = Color.green;
-        }
-        if (_nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal)
-        {
-            UpgradeBtn.interactable = true;
-        }
-        else
-        {
-            UpgradeBtn.interactable = false;
-            MetalGoal.color = Color.black;
-            CrystalGoal.color = Color.black;
-        }
+
+        MetalGoal.color = _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal ? Color.green : Color.black;
+        CrystalGoal.color = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal ? Color.green : Color.black;
+
+        // If both materials gathered
+        UpgradeBtn.interactable = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal && _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal;
 
         MetalGoal.text = "Metal : " + _nbMetal + " / " + Upgrades[_currentUpgradeGoal].NbMetal;
         CrystalGoal.text = "Crystal : " + _nbCrystal + " / " + Upgrades[_currentUpgradeGoal].NbCrystal;
@@ -152,9 +140,14 @@ public class Game : MonoBehaviour
     {
         _nbMetal -= Upgrades[_currentUpgradeGoal].NbMetal;
         _nbCrystal -= Upgrades[_currentUpgradeGoal].NbCrystal;
-        SpaceshipUpgrades[_currentUpgradeGoal].SetActive(true);
+        SpawnSpaceshipPart(SpaceshipUpgrades[_currentUpgradeGoal]);
         _currentUpgradeGoal++;
         UpdateUpgradeUI();
+    }
+
+    private void SpawnSpaceshipPart(GameObject part)
+    {
+        part.GetComponent<Animator>().SetTrigger("Spawn");
     }
 
     public void DisplayNeedEnergy()

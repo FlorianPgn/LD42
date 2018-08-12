@@ -6,6 +6,8 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: m_metal
+    2100002: m_plant_metal
+    2100004: m_plant_gray
     2300000: //RootNode
     3300000: //RootNode
     4300000: obj_metal

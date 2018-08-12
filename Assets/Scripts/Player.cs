@@ -7,19 +7,23 @@ public class Player : MonoBehaviour
 {
 
     public Transform CarryTarget;
+    public float MoveSpeed;
+
     private bool carrySomething = false;
     private Carryable _carriedObject;
+    private Rigidbody _rb;
 
     // Use this for initialization
     void Start()
     {
+        _rb = GetComponent<Rigidbody>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        _rb.velocity = Vector3.right * Input.GetAxisRaw("Horizontal") * MoveSpeed + Vector3.forward * Input.GetAxisRaw("Vertical") * MoveSpeed;
     }
 
     public bool Give(Carryable obj)

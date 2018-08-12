@@ -84,7 +84,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1986056626529678}
-  m_Mesh: {fileID: 4300000, guid: 2610ab379a812fe4fa31199fb75fa1cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 78144e01b2cbde04a835fbeedd3e0478, type: 3}
 --- !u!114 &114851104485517498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type:
-    plant: 0
-    color: {r: 0.93725497, g: 0.77647066, b: 0.2627451, a: 1}
+    plant: 3
+    color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
   IsSeed: 1
 --- !u!135 &135263883273951488
 SphereCollider:
