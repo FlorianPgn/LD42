@@ -57,10 +57,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
+  - {fileID: 2100006, guid: 619e9492ae42b664288b2c7d10638e0b, type: 3}
   - {fileID: 2100002, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
-  - {fileID: 2100006, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
-  - {fileID: 2100004, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
+  - {fileID: 2100004, guid: 0c68c6647bb790f41ae5b59b4ae3199c, type: 3}
+  - {fileID: 2100006, guid: 0c68c6647bb790f41ae5b59b4ae3199c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,7 +86,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1825107896478546}
-  m_Mesh: {fileID: 4300000, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 3a6aefb5e7e481e44bd0b62c62e99780, type: 3}
 --- !u!114 &114445707113434242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,8 +104,8 @@ MonoBehaviour:
   IsSeed: 0
   meshes:
   - {fileID: 4300000, guid: 78144e01b2cbde04a835fbeedd3e0478, type: 3}
-  - {fileID: 4300000, guid: 13a6ba9d387033a49b988f35317f4071, type: 3}
-  - {fileID: 4300000, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
+  - {fileID: 4300000, guid: 0c68c6647bb790f41ae5b59b4ae3199c, type: 3}
+  - {fileID: 4300000, guid: 3a6aefb5e7e481e44bd0b62c62e99780, type: 3}
   HarvestMesh: {fileID: 4300000, guid: 2500a3ea8ca10484abf312015e404d29, type: 3}
   GrowTime: 15
   _readyToHarvest: 0
