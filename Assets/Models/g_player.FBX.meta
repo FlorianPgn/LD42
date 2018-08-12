@@ -5,14 +5,44 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: obj_player_head
+    100004: obj_player_arm_L
+    100006: obj_player_arm_R
+    100008: obj_player_body
+    100010: obj_player_hose
+    100012: obj_player_leg_L
+    100014: obj_player_leg_R
     400000: //RootNode
     400002: obj_player_head
+    400004: obj_player_arm_L
+    400006: obj_player_arm_R
+    400008: obj_player_body
+    400010: obj_player_hose
+    400012: obj_player_leg_L
+    400014: obj_player_leg_R
     2100000: m_gray
     2100002: m_black
     2100004: m_reflective
     2300000: obj_player_head
+    2300002: obj_player_arm_L
+    2300004: obj_player_arm_R
+    2300006: obj_player_body
+    2300008: obj_player_hose
+    2300010: obj_player_leg_L
+    2300012: obj_player_leg_R
     3300000: obj_player_head
+    3300002: obj_player_arm_L
+    3300004: obj_player_arm_R
+    3300006: obj_player_body
+    3300008: obj_player_hose
+    3300010: obj_player_leg_L
+    3300012: obj_player_leg_R
     4300000: obj_player_head
+    4300002: obj_player_body
+    4300004: obj_player_arm_L
+    4300006: obj_player_arm_R
+    4300008: obj_player_hose
+    4300010: obj_player_leg_R
+    4300012: obj_player_leg_L
     7400000: modeling_6
     9500000: //RootNode
     2186277476908879412: ImportLogs
@@ -43,11 +73,39 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: modeling_6
+      takeName: modeling_6
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -66,8 +124,8 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
-    previousCalculatedGlobalScale: 0.0001
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

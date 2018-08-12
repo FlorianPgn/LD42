@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour
 
     private Camera _camera;
     private NavMeshAgent _agent;
+    private Animator _animator;
 
     public LayerMask GroundMask;
     public LayerMask ClickableMask;
+    
 
     private Collider _previousCollider;
 
@@ -21,10 +23,12 @@ public class PlayerController : MonoBehaviour
     {
         _camera = Camera.main;
         _agent = GetComponent<NavMeshAgent>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
+        _animator.SetFloat("Speed", _agent.desiredVelocity.magnitude);
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
