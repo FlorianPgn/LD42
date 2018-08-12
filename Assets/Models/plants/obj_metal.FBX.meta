@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 84f2e525f3bcd3d41865e04116c067ae
+guid: ee180ee68da30634b91fc3826f9cdde6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: m_plant_crystal_2
-    2100002: m_plant_crystal
-    2100004: m_crystal
+    2100000: m_metal
     2300000: //RootNode
     3300000: //RootNode
-    4300000: obj_plant_stg1_crystal
+    4300000: obj_metal
   externalObjects: {}
   materials:
     importMaterials: 1

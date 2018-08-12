@@ -1,14 +1,15 @@
 fileFormatVersion: 2
-guid: be2c5598efef36840b164aaf739ed538
+guid: daffc43937fdd044f9c7c1bfe94fd31a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: m_oxygen
+    2100000: m_plant-oxygen
+    2100002: m_oxygen
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Sphere001
+    4300000: obj_plant_stg1_oxygen
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +41,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -59,7 +60,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:

@@ -103,9 +103,9 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
   IsSeed: 0
   meshes:
-  - {fileID: 4300000, guid: 2610ab379a812fe4fa31199fb75fa1cf, type: 3}
-  - {fileID: 4300000, guid: 2067a3b907db8b3419e23cf7df9fe6fb, type: 3}
-  - {fileID: 4300000, guid: 22c1010ad442a864cadda206c54c5a8d, type: 3}
-  HarvestMesh: {fileID: 4300000, guid: 98a0f52c7f3a19c4884a238f1b957d06, type: 3}
+  - {fileID: 4300000, guid: 78144e01b2cbde04a835fbeedd3e0478, type: 3}
+  - {fileID: 4300000, guid: 13a6ba9d387033a49b988f35317f4071, type: 3}
+  - {fileID: 4300000, guid: 13a6ba9d387033a49b988f35317f4071, type: 3}
+  HarvestMesh: {fileID: 4300000, guid: 2500a3ea8ca10484abf312015e404d29, type: 3}
   GrowTime: 15
   _readyToHarvest: 0
