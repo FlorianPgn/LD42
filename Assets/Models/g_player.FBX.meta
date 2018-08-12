@@ -47,7 +47,22 @@ ModelImporter:
     7400002: Idle
     9500000: //RootNode
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_black
+    second: {fileID: 2100000, guid: 97ac80fa90b17a04990a41d4bd5b0388, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_gray
+    second: {fileID: 2100000, guid: 2b59f6996cc152a4aa04dcaa33f4fbce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_reflective
+    second: {fileID: 2100000, guid: d792e23430868564592a86f2a458b86e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
