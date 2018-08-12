@@ -23,7 +23,9 @@ public class AudioManager : MonoBehaviour
             GameObject newMusicSource = new GameObject("Music source " + (i + 1));
             _musicSources[i] = newMusicSource.AddComponent<AudioSource>();
             newMusicSource.transform.parent = transform;
+            _musicSources[i].loop = true;
         }
+        SetVolume(PlayerPrefs.GetFloat("volume"));
     }
 
 
@@ -32,11 +34,21 @@ public class AudioManager : MonoBehaviour
         _activeMusicSourceIndex = 1 - _activeMusicSourceIndex;
         _musicSources[_activeMusicSourceIndex].clip = clip;
         _musicSources[_activeMusicSourceIndex].Play();
+        StartCoroutine(AnimatedMusicCrossFade(fadeDuration));
     }
 
     public void PlaySound(AudioClip clip, Vector3 pos)
     {
         AudioSource.PlayClipAtPoint(clip, pos, _volume);
+    }
+
+    public void SetVolume(float volumePercent)
+    {
+        _volume = volumePercent;
+        _musicSources[0].volume = volumePercent;
+        _musicSources[1].volume = volumePercent;
+        PlayerPrefs.SetFloat("volume", volumePercent);
+        PlayerPrefs.Save();
     }
 
     private IEnumerator AnimatedMusicCrossFade(float duration)

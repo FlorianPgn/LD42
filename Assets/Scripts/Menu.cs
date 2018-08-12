@@ -22,6 +22,11 @@ public class Menu : MonoBehaviour
     {
         _activeResIndex = PlayerPrefs.GetInt(RES_INDEX);
         bool isFullscreen = (PlayerPrefs.GetInt(FULLSCREEN) == 1) ? true : false;
+        for (int i = 0; i < resolutionToggles.Length; i++)
+        {
+            resolutionToggles[i].interactable = i == _activeResIndex;
+        }
+        SetFullScreen(isFullscreen);
     }
 
     public void Play()
@@ -75,7 +80,7 @@ public class Menu : MonoBehaviour
 
     public void Volume(float value)
     {
-
+        AudioManager.instance.SetVolume(value);
     }
 
     public void Back()

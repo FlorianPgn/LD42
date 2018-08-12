@@ -46,6 +46,7 @@ public class Game : MonoBehaviour
         _currentUpgradeGoal = 0;
         UpdateUpgradeUI();
         StartCoroutine(OxygenDecay());
+        MusicManager.instance.PlayMainTheme();
     }
 
     private IEnumerator OxygenDecay()

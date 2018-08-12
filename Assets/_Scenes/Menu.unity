@@ -427,7 +427,7 @@ RectTransform:
   - {fileID: 960261656}
   - {fileID: 755556538}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -934,6 +934,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 613151151}
   m_CullTransparentMesh: 0
+--- !u!1001 &644679319
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -59.423492
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.9545374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 89.28125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240554879951338, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b40cade1faa31704b988e3eb1e5bcd87, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &670047742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1969,18 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1996194193}
+        m_MethodName: Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1434812470
@@ -3566,7 +3619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2059202053
 GameObject:
