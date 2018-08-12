@@ -13,7 +13,7 @@ public class Trash : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        _material = GetComponent<Renderer>().material;
+        _material = GetComponent<Renderer>().materials[1];
         _originalColor = _material.color;
         _player = FindObjectOfType<Player>();
     }
