@@ -1,18 +1,24 @@
 fileFormatVersion: 2
-guid: 726b9d33206a81e40a7380c087f3f7e3
+guid: 572d7f33dd0b5e5419e5327e7ea7b129
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: obj_machine_dispenser
+    100004: obj_machine_dispenser_seed
     400000: //RootNode
-    2100000: m_black
+    400002: obj_machine_dispenser
+    400004: obj_machine_dispenser_seed
+    2100000: m_energy
     2100002: m_gray
-    2100004: m_glass
-    2100006: m_energy
-    2100008: m_water
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: obj_machine_water
+    2100004: m_black
+    2100006: m_glass
+    2300000: obj_machine_dispenser
+    2300002: obj_machine_dispenser_seed
+    3300000: obj_machine_dispenser
+    3300002: obj_machine_dispenser_seed
+    4300000: obj_machine_dispenser_seed
+    4300002: obj_machine_dispenser
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -44,7 +50,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -63,7 +69,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:

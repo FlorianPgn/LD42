@@ -1,18 +1,53 @@
 fileFormatVersion: 2
-guid: 726b9d33206a81e40a7380c087f3f7e3
+guid: 0c6ebf5e49f251048a4903aa7cfd34c9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: obj_crystal007
+    100004: obj_energy001
+    100006: obj_metal006
+    100008: obj_oxygen002
+    100010: obj_seed001
+    100012: obj_trash
+    100014: obj_trash_door
     400000: //RootNode
+    400002: obj_crystal007
+    400004: obj_energy001
+    400006: obj_metal006
+    400008: obj_oxygen002
+    400010: obj_seed001
+    400012: obj_trash
+    400014: obj_trash_door
     2100000: m_black
-    2100002: m_gray
-    2100004: m_glass
-    2100006: m_energy
-    2100008: m_water
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: obj_machine_water
+    2100002: m_energy
+    2100004: m_oxygen
+    2100006: m_crystal
+    2100008: m_plant_metal
+    2100010: m_metal
+    2100012: m_plant_gray
+    2100014: m_gray
+    2300000: obj_crystal007
+    2300002: obj_energy001
+    2300004: obj_metal006
+    2300006: obj_oxygen002
+    2300008: obj_seed001
+    2300010: obj_trash
+    2300012: obj_trash_door
+    3300000: obj_crystal007
+    3300002: obj_energy001
+    3300004: obj_metal006
+    3300006: obj_oxygen002
+    3300008: obj_seed001
+    3300010: obj_trash
+    3300012: obj_trash_door
+    4300000: obj_trash_door
+    4300002: obj_energy001
+    4300004: obj_oxygen002
+    4300006: obj_crystal007
+    4300008: obj_metal006
+    4300010: obj_seed001
+    4300012: obj_trash
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -44,7 +79,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -63,7 +98,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
