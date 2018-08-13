@@ -7,10 +7,12 @@ ModelImporter:
     100002: obj_energy
     100004: obj_machine_grinder
     100006: obj_oxygen001
+    100008: obj_machine_door
     400000: //RootNode
     400002: obj_energy
     400004: obj_machine_grinder
     400006: obj_oxygen001
+    400008: obj_machine_door
     2100000: m_energy
     2100002: m_oxygen
     2100004: m_black
@@ -19,13 +21,16 @@ ModelImporter:
     2300000: obj_energy
     2300002: obj_machine_grinder
     2300004: obj_oxygen001
+    2300006: obj_machine_door
     3300000: obj_energy
     3300002: obj_machine_grinder
     3300004: obj_oxygen001
+    3300006: obj_machine_door
     4300000: obj_energy
     4300002: obj_oxygen001
     4300004: obj_machine_grinder
-    7400000: modeling_7
+    4300006: obj_machine_door
+    7400000: Drop
     9500000: //RootNode
     11100000: //RootNode
   externalObjects:
@@ -43,7 +48,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: m_gray
-    second: {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
+    second: {fileID: 2100000, guid: 4f46139d0e61b4747a9747a502cd556b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -80,7 +85,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Drop
+      takeName: modeling_7
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
