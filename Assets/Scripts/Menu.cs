@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     public GameObject OptionsMenu;
 
     public Toggle[] resolutionToggles;
+    public Toggle fullscreenToggle;
     public Slider volume;
     public int[] screenWidths;
 
@@ -24,8 +25,10 @@ public class Menu : MonoBehaviour
         bool isFullscreen = (PlayerPrefs.GetInt(FULLSCREEN) == 1) ? true : false;
         for (int i = 0; i < resolutionToggles.Length; i++)
         {
-            resolutionToggles[i].interactable = i == _activeResIndex;
+            resolutionToggles[i].isOn = i == _activeResIndex;
         }
+        volume.value = AudioManager.instance.GetVolume();
+        fullscreenToggle.isOn = isFullscreen;
         SetFullScreen(isFullscreen);
     }
 

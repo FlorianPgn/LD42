@@ -7,7 +7,15 @@ using TMPro;
 
 public class Game : MonoBehaviour
 {
-    public enum TOOLTIP { SMELTER, CRYSTALIZER, TRASH}
+    public enum Machine { SMELTER, CRYSTALIZER, TRASH, DISPENSER, TRANSPORTER }
+
+    [System.Serializable]
+    public struct Tooltip
+    {
+        public Machine machine;
+        public GameObject tip;
+    }
+    public Tooltip[] Tooltips;
 
     [System.Serializable]
     public struct Upgrade
@@ -23,7 +31,11 @@ public class Game : MonoBehaviour
     public Jauge OxygenJauge;
     public TextMeshProUGUI MetalGoal;
     public TextMeshProUGUI CrystalGoal;
+    public Image MetalGlow;
+    public Image CrystalGlow;
     public Button UpgradeBtn;
+    public Warning EnergyWarning;
+    public GameObject WinPanel;
 
     private const int ENERGY_MAX_VALUE = 200;
     private const int OXYGEN_MAX_VALUE = 100;
@@ -32,11 +44,12 @@ public class Game : MonoBehaviour
     private const int CRYSTAL_COST = 30;
     private const int METAL_COST = 20;
 
-    private const float OXYGEN_DECAY_DELAY_IN_S = 2f;
+    private const float OXYGEN_DECAY_DELAY_IN_S = 1.5f;
 
     private int _nbMetal;
     private int _nbCrystal;
     private int _currentUpgradeGoal;
+    private bool _needEnergy;
 
     private void Start()
     {
@@ -49,13 +62,18 @@ public class Game : MonoBehaviour
         _currentUpgradeGoal = 0;
         UpdateUpgradeUI();
         StartCoroutine(OxygenDecay());
-        MusicManager.instance.PlayMainTheme();
+        if (MusicManager.instance != null)
+        {
+            MusicManager.instance.PlayMainTheme();
+        }
+       
     }
 
     public void Update()
     {
-        EnergyJauge.WarnUser(EnergyJauge.TargetAmount < OXYGEN_COST);
-        OxygenJauge.WarnUser(OxygenJauge.TargetAmount < OXYGEN_MAX_VALUE * 0.2f); // Warn 20%
+        EnergyJauge.WarnUser(EnergyJauge.TargetAmount < OXYGEN_COST || _needEnergy);
+        OxygenJauge.WarnUser(OxygenJauge.TargetAmount < OXYGEN_MAX_VALUE * 0.25f); // Warn 25%
+        EnergyWarning.gameObject.SetActive(_needEnergy);
     }
 
     private IEnumerator OxygenDecay()
@@ -71,6 +89,7 @@ public class Game : MonoBehaviour
 
     public void AddEnergy(int quantity)
     {
+        _needEnergy = false;
         if (EnergyJauge.TargetAmount + quantity > ENERGY_MAX_VALUE)
         {
             EnergyJauge.TargetAmount = ENERGY_MAX_VALUE;
@@ -85,6 +104,7 @@ public class Game : MonoBehaviour
     {
         if (OXYGEN_COST > EnergyJauge.TargetAmount)
         {
+            _needEnergy = true;
             return false;
         }
         else
@@ -107,6 +127,7 @@ public class Game : MonoBehaviour
     {
         if (METAL_COST > EnergyJauge.TargetAmount)
         {
+            _needEnergy = true;
             return false;
         }
         else
@@ -135,14 +156,13 @@ public class Game : MonoBehaviour
 
     public void UpdateUpgradeUI()
     {
-
-        //MetalGoal.color = _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal ? Color.green : Color.black;
-        //CrystalGoal.color = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal ? Color.green : Color.black;
+        MetalGlow.enabled = _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal;
+        CrystalGlow.enabled = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal;
 
         // If both materials gathered
         UpgradeBtn.interactable = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal && _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal;
 
-        MetalGoal.text =_nbMetal + " / " + Upgrades[_currentUpgradeGoal].NbMetal;
+        MetalGoal.text = _nbMetal + " / " + Upgrades[_currentUpgradeGoal].NbMetal;
         CrystalGoal.text = _nbCrystal + " / " + Upgrades[_currentUpgradeGoal].NbCrystal;
     }
 
@@ -155,25 +175,56 @@ public class Game : MonoBehaviour
         {
             SpawnSpaceshipPart(_currentUpgradeGoal);
             UpdateUpgradeUI();
-        } else
+        }
+        else
         {
-
+            EndOfGame();
         }
     }
 
     private void SpawnSpaceshipPart(int partId)
     {
-        Spaceship.GetComponent<Animator>().SetTrigger("SpawnR"+_currentUpgradeGoal);
+        Spaceship.GetComponent<Animator>().SetTrigger("SpawnR" + _currentUpgradeGoal);
     }
 
-    public void DisplayNeedEnergy()
+    public void ToggleTooltip(Machine machine)
     {
-        Debug.Log("NEED MORE ENERGY");
+        foreach (Tooltip item in Tooltips)
+        {
+            if(item.machine == machine)
+            {
+                item.tip.SetActive(!item.tip.activeSelf);
+            }
+        }
+    }
+
+    public void NeedEnergy()
+    {
+        _needEnergy = true;
     }
 
     private void GameOver()
     {
         Debug.Log("GAME OVER");
+    }
+
+    [ContextMenu("Test")]
+    public void EndOfGame()
+    {
+        StartCoroutine(Win());
+        FindObjectOfType<InGameMenu>().DisplayMenu = true;
+    }
+
+    private IEnumerator Win()
+    {
+        float percent = 0;
+        while (percent < 1)
+        {
+            percent += Time.deltaTime / 4f;
+            float lerp =  -0.5f * (Mathf.Cos(Mathf.PI * percent) - 1.0f);
+            WinPanel.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, lerp);
+            yield return null;
+        }
     }
 
 }

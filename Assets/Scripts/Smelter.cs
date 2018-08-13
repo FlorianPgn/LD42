@@ -9,6 +9,7 @@ public class Smelter : MonoBehaviour
     private Player _player;
     private Game _game;
 
+    public Animator Animator;
     public Color SelectedColor;
 
     // Use this for initialization
@@ -23,11 +24,13 @@ public class Smelter : MonoBehaviour
     public void Enter()
     {
         _material.color = SelectedColor;
+        _game.ToggleTooltip(Game.Machine.SMELTER);
     }
 
     public void Exit()
     {
         _material.color = _originalColor;
+        _game.ToggleTooltip(Game.Machine.SMELTER);
     }
 
     public void Select()
@@ -40,6 +43,7 @@ public class Smelter : MonoBehaviour
                 if (_game.AddMetal())
                 {
                     _player.DiscardItem();
+                    Animator.SetTrigger("Play");
                 }
             }
         }

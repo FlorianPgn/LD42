@@ -9,6 +9,7 @@ public class Grinder : MonoBehaviour, IClickableObj {
     private Player _player;
     private Game _game;
 
+    public Animator Animator;
     public Color SelectedColor;
 
     // Use this for initialization
@@ -28,11 +29,13 @@ public class Grinder : MonoBehaviour, IClickableObj {
     public void Enter()
     {
         _material.color = SelectedColor;
+        _game.ToggleTooltip(Game.Machine.TRANSPORTER);
     }
 
     public void Exit()
     {
         _material.color = _originalColor;
+        _game.ToggleTooltip(Game.Machine.TRANSPORTER);
     }
 
     public void Select()
@@ -43,15 +46,17 @@ public class Grinder : MonoBehaviour, IClickableObj {
             {
                 _game.AddEnergy(50);
                 _player.DiscardItem();
+                Animator.SetTrigger("PlayE");
             }
             if (playerPlant.Type.plant == Carryable.PlantType.OXYGEN)
             {
                 if(_game.AddOxygen(40))
                 {
                     _player.DiscardItem();
+                    Animator.SetTrigger("PlayO");
                 } else
                 {
-                    _game.DisplayNeedEnergy();
+                    _game.NeedEnergy();
                 }
             }
         }

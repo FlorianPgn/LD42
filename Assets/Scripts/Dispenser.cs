@@ -15,6 +15,7 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     private Color _originalColor;
     private int _currentIndex = 0;
     private Player _player;
+    private Game _game;
 
 	// Use this for initialization
 	void Start () {
@@ -22,13 +23,13 @@ public class Dispenser : MonoBehaviour, IClickableObj {
         _materials = GetComponent<Renderer>().materials;
         _originalColor = _materialHover.color;
         _player = FindObjectOfType<Player>();
+        _game = FindObjectOfType<Game>();
         UpdateColor();
     }
 
     public void NextSeed()
     {
         _currentIndex = (_currentIndex + 1) % Seeds.Length;
-        Animator.SetTrigger("Play");
         UpdateColor();
     }
 
@@ -42,7 +43,7 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     public void Enter()
     {
         _materials[0].color = SelectedColor;
-        //GetComponent<Renderer>().materials = _materials;
+        _game.ToggleTooltip(Game.Machine.DISPENSER);
     }
 
     public void Select()
@@ -51,11 +52,13 @@ public class Dispenser : MonoBehaviour, IClickableObj {
         SeedPrefab.IsSeed = true;
         if (_player.Give(SeedPrefab))
         {
+            Animator.SetTrigger("Play");
         }
     }
 
     public void Exit()
     {
         _materials[0].color = _originalColor;
+        _game.ToggleTooltip(Game.Machine.DISPENSER);
     }
 }

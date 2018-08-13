@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crystalizer : MonoBehaviour {
+public class Crystalizer : MonoBehaviour
+{
 
     private Material _material;
     private Color _originalColor;
@@ -10,6 +11,7 @@ public class Crystalizer : MonoBehaviour {
     private Game _game;
 
     public Color SelectedColor;
+    public Animator Animator;
 
     // Use this for initialization
     private void Start()
@@ -23,11 +25,13 @@ public class Crystalizer : MonoBehaviour {
     public void Enter()
     {
         _material.color = SelectedColor;
+        _game.ToggleTooltip(Game.Machine.CRYSTALIZER);
     }
 
     public void Exit()
     {
         _material.color = _originalColor;
+        _game.ToggleTooltip(Game.Machine.CRYSTALIZER);
     }
 
     public void Select()
@@ -37,9 +41,10 @@ public class Crystalizer : MonoBehaviour {
         {
             if (playerPlant.Type.plant == Carryable.PlantType.CRYSTAL)
             {
-                if(_game.AddCrystal())
+                if (_game.AddCrystal())
                 {
                     _player.DiscardItem();
+                    Animator.SetTrigger("Play");
                 }
             }
         }

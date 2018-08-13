@@ -104,6 +104,6 @@ MonoBehaviour:
   - {fileID: 4300000, guid: 78144e01b2cbde04a835fbeedd3e0478, type: 3}
   - {fileID: 4300000, guid: daffc43937fdd044f9c7c1bfe94fd31a, type: 3}
   - {fileID: 4300000, guid: a82b19d6d381e704ca13ae9c4d051f31, type: 3}
-  HarvestMesh: {fileID: 4300000, guid: bfb9021488d7a934599247e893570ad8, type: 3}
+  HarvestMesh: {fileID: 4300000, guid: 0ea3fb1b3a1631d42a13c99d69f04848, type: 3}
   GrowTime: 15
   _readyToHarvest: 0
