@@ -7,6 +7,8 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     public Carryable.SeedType[] Seeds;
     public Carryable SeedPrefab;
     public Color SelectedColor;
+    public Renderer DespenserSeedRenderer;
+    public Animator Animator;
 
     private Material[] _materials;
     private Material _materialHover;
@@ -26,6 +28,7 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     public void NextSeed()
     {
         _currentIndex = (_currentIndex + 1) % Seeds.Length;
+        Animator.SetTrigger("Play");
         UpdateColor();
     }
 
@@ -33,6 +36,7 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     {
         _materials[3] = Seeds[_currentIndex].material;
         GetComponent<Renderer>().materials = _materials;
+        DespenserSeedRenderer.material = Seeds[_currentIndex].material;
     }
 
     public void Enter()
@@ -45,7 +49,9 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     {
         SeedPrefab.Type = Seeds[_currentIndex];
         SeedPrefab.IsSeed = true;
-        _player.Give(SeedPrefab);
+        if (_player.Give(SeedPrefab))
+        {
+        }
     }
 
     public void Exit()

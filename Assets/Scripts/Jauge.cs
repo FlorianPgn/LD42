@@ -52,15 +52,19 @@ public class Jauge : MonoBehaviour
 
     private IEnumerator WarnUser()
     {
-        Color newC = Icon.color;
+        Color newIconC = Icon.color;
+        Color newBarC = Bar.color;
         while (_warning)
         {
             float l1 = -1;
             float h1 = 1;
             float l2 = 0.2f;
             float h2 = 0.6f;
-            newC.a = l2 + (Mathf.Sin(Time.time * 5) - l1) * (h2 - l2) / (h1 - l1);
-            Icon.color = newC;
+            float alpha = l2 + (Mathf.Sin(Time.time * 5) - l1) * (h2 - l2) / (h1 - l1);
+            newIconC.a = alpha;
+            newBarC.a = l2 + (Mathf.Sin(Time.time * 5) - l1) * (1f - l2) / (h1 - l1);
+            Icon.color = newIconC;
+            Bar.color = newBarC;
             yield return null;
         }
         StopWarning();
@@ -69,8 +73,11 @@ public class Jauge : MonoBehaviour
 
     private void StopWarning()
     {
-        Color newC = Icon.color;
-        newC.a = 0;
-        Icon.color = newC;
+        Color newIconC = Icon.color;
+        Color newBarC = Bar.color;
+        newIconC.a = 0;
+        newBarC.a = 1f;
+        Icon.color = newIconC;
+        Bar.color = newBarC;
     }
 }
