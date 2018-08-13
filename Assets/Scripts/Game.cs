@@ -32,7 +32,7 @@ public class Game : MonoBehaviour
     private const int CRYSTAL_COST = 30;
     private const int METAL_COST = 20;
 
-    private const float OXYGEN_DECAY_DELAY_IN_S = 1f;
+    private const float OXYGEN_DECAY_DELAY_IN_S = 2f;
 
     private int _nbMetal;
     private int _nbCrystal;
@@ -151,8 +151,14 @@ public class Game : MonoBehaviour
         _nbMetal -= Upgrades[_currentUpgradeGoal].NbMetal;
         _nbCrystal -= Upgrades[_currentUpgradeGoal].NbCrystal;
         _currentUpgradeGoal++;
-        SpawnSpaceshipPart(_currentUpgradeGoal);
-        UpdateUpgradeUI();
+        if (_currentUpgradeGoal < Upgrades.Length)
+        {
+            SpawnSpaceshipPart(_currentUpgradeGoal);
+            UpdateUpgradeUI();
+        } else
+        {
+
+        }
     }
 
     private void SpawnSpaceshipPart(int partId)

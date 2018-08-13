@@ -78,7 +78,17 @@ ModelImporter:
     4300022: obj_soil003
     4300024: obj_soil004
     4300026: obj_soil005
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_black
+    second: {fileID: 2100000, guid: 188e84b5a637e204d9c059078db47f98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_gray
+    second: {fileID: 2100000, guid: 4f46139d0e61b4747a9747a502cd556b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

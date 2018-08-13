@@ -10,7 +10,7 @@ public abstract class Carryable : MonoBehaviour {
     public struct SeedType
     {
         public PlantType plant;
-        public Color color;
+        public Material material;
     }
 
     public SeedType Type;

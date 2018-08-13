@@ -57,10 +57,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100006, guid: 619e9492ae42b664288b2c7d10638e0b, type: 3}
+  - {fileID: 2100000, guid: d9af69fa693046a48afae24bb338762b, type: 2}
   - {fileID: 2100002, guid: 6de8bde0e1e306845b2da156242fbd34, type: 3}
   - {fileID: 2100004, guid: 0c68c6647bb790f41ae5b59b4ae3199c, type: 3}
-  - {fileID: 2100006, guid: 0c68c6647bb790f41ae5b59b4ae3199c, type: 3}
+  - {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type:
     plant: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
+    material: {fileID: 0}
   IsSeed: 0
   meshes:
   - {fileID: 4300000, guid: 78144e01b2cbde04a835fbeedd3e0478, type: 3}

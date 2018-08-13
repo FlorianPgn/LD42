@@ -12,7 +12,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: obj_plant_stg1_energy
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_energy
+    second: {fileID: 2100000, guid: d9af69fa693046a48afae24bb338762b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_glass
+    second: {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -59,7 +59,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: ac69460d19cb8f9438c3d390648d30f8, type: 3}
   - {fileID: 2100002, guid: ac69460d19cb8f9438c3d390648d30f8, type: 3}
-  - {fileID: 2100004, guid: ac69460d19cb8f9438c3d390648d30f8, type: 3}
+  - {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207112294560268}
-  m_Mesh: {fileID: 4300000, guid: 496bab9fcf2efaa44b3f5ca237a948cc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: ac69460d19cb8f9438c3d390648d30f8, type: 3}
 --- !u!114 &114284554587423952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,12 +99,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type:
     plant: 4
-    color: {r: 0, g: 0, b: 0, a: 0}
+    material: {fileID: 0}
   IsSeed: 0
   meshes:
   - {fileID: 4300000, guid: 78144e01b2cbde04a835fbeedd3e0478, type: 3}
   - {fileID: 4300000, guid: f9bd3929942c5b849b69bccf994b01a3, type: 3}
   - {fileID: 4300000, guid: ac69460d19cb8f9438c3d390648d30f8, type: 3}
   HarvestMesh: {fileID: 4300000, guid: 59ad5d730cc672441b483b622024fb9b, type: 3}
-  GrowTime: 15
+  GrowTime: 30
   _readyToHarvest: 0

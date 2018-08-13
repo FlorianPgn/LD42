@@ -10,7 +10,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: obj_plant_stg2_oxygen
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_oxygen
+    second: {fileID: 2100000, guid: c045c267b7310c448813e282cefd795f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

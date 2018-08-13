@@ -1,24 +1,17 @@
 fileFormatVersion: 2
-guid: 619e9492ae42b664288b2c7d10638e0b
+guid: 726b9d33206a81e40a7380c087f3f7e3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: obj_plant_stg1_energy
-    100004: obj_plant_stg2_energy
     400000: //RootNode
-    400002: obj_plant_stg1_energy
-    400004: obj_plant_stg2_energy
-    2100000: m_glass
-    2100002: m_plant_energy
-    2100004: m_plant_energy_2
+    2100000: m_black
+    2100002: m_gray
+    2100004: m_glass
     2100006: m_energy
-    2300000: obj_plant_stg1_energy
-    2300002: obj_plant_stg2_energy
-    3300000: obj_plant_stg1_energy
-    3300002: obj_plant_stg2_energy
-    4300000: obj_plant_stg1_energy
-    4300002: obj_plant_stg2_energy
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: obj_machine_water
   externalObjects: {}
   materials:
     importMaterials: 1

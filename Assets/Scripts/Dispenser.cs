@@ -8,7 +8,7 @@ public class Dispenser : MonoBehaviour, IClickableObj {
     public Carryable SeedPrefab;
     public Color SelectedColor;
 
-    private Material _material;
+    private Material[] _materials;
     private Material _materialHover;
     private Color _originalColor;
     private int _currentIndex = 0;
@@ -16,8 +16,8 @@ public class Dispenser : MonoBehaviour, IClickableObj {
 
 	// Use this for initialization
 	void Start () {
-        _material = GetComponent<Renderer>().materials[3];
         _materialHover = GetComponent<Renderer>().materials[0];
+        _materials = GetComponent<Renderer>().materials;
         _originalColor = _materialHover.color;
         _player = FindObjectOfType<Player>();
         UpdateColor();
@@ -31,12 +31,14 @@ public class Dispenser : MonoBehaviour, IClickableObj {
 
     private void UpdateColor()
     {
-        _material.color = Seeds[_currentIndex].color;
+        _materials[3] = Seeds[_currentIndex].material;
+        GetComponent<Renderer>().materials = _materials;
     }
 
     public void Enter()
     {
-        _materialHover.color = SelectedColor;
+        _materials[0].color = SelectedColor;
+        //GetComponent<Renderer>().materials = _materials;
     }
 
     public void Select()
@@ -48,6 +50,6 @@ public class Dispenser : MonoBehaviour, IClickableObj {
 
     public void Exit()
     {
-        _materialHover.color = _originalColor;
+        _materials[0].color = _originalColor;
     }
 }

@@ -8,8 +8,7 @@ public class Seed : Carryable
 
     private void Start()
     {
-        _material = GetComponent<Renderer>().material;
-        _material.color = Type.color;
+        GetComponent<Renderer>().material = Type.material;
         IsSeed = true;
     }
 }
