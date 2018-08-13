@@ -10,13 +10,15 @@ public class Jauge : MonoBehaviour
     public float Speed = 0.05f;
     public int MaxValue;
     public int TargetAmount;
-    private bool _warning;
 
+    private bool _warning;
     private float _CurrentAmount;
     private float _nextUpdate;
+    private float _originalAlpha;
 
     private void Start()
     {
+        _originalAlpha = Bar.color.a;
         _nextUpdate = Time.time;
         StartCoroutine(UpdateJauge());
         _CurrentAmount = TargetAmount;
@@ -76,7 +78,7 @@ public class Jauge : MonoBehaviour
         Color newIconC = Icon.color;
         Color newBarC = Bar.color;
         newIconC.a = 0;
-        newBarC.a = 1f;
+        newBarC.a = _originalAlpha;
         Icon.color = newIconC;
         Bar.color = newBarC;
     }
