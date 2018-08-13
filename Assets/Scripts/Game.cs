@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Game : MonoBehaviour
 {
+    public enum TOOLTIP { SMELTER, CRYSTALIZER, TRASH}
+
     [System.Serializable]
     public struct Upgrade
     {
@@ -18,8 +21,8 @@ public class Game : MonoBehaviour
 
     public Jauge EnergyJauge;
     public Jauge OxygenJauge;
-    public Text MetalGoal;
-    public Text CrystalGoal;
+    public TextMeshProUGUI MetalGoal;
+    public TextMeshProUGUI CrystalGoal;
     public Button UpgradeBtn;
 
     private const int ENERGY_MAX_VALUE = 200;
@@ -47,6 +50,12 @@ public class Game : MonoBehaviour
         UpdateUpgradeUI();
         StartCoroutine(OxygenDecay());
         MusicManager.instance.PlayMainTheme();
+    }
+
+    public void Update()
+    {
+        EnergyJauge.WarnUser(EnergyJauge.TargetAmount < OXYGEN_COST);
+        OxygenJauge.WarnUser(OxygenJauge.TargetAmount < OXYGEN_MAX_VALUE * 0.2f); // Warn 20%
     }
 
     private IEnumerator OxygenDecay()
@@ -127,14 +136,14 @@ public class Game : MonoBehaviour
     public void UpdateUpgradeUI()
     {
 
-        MetalGoal.color = _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal ? Color.green : Color.black;
-        CrystalGoal.color = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal ? Color.green : Color.black;
+        //MetalGoal.color = _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal ? Color.green : Color.black;
+        //CrystalGoal.color = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal ? Color.green : Color.black;
 
         // If both materials gathered
         UpgradeBtn.interactable = _nbCrystal >= Upgrades[_currentUpgradeGoal].NbCrystal && _nbMetal >= Upgrades[_currentUpgradeGoal].NbMetal;
 
-        MetalGoal.text = "Metal : " + _nbMetal + " / " + Upgrades[_currentUpgradeGoal].NbMetal;
-        CrystalGoal.text = "Crystal : " + _nbCrystal + " / " + Upgrades[_currentUpgradeGoal].NbCrystal;
+        MetalGoal.text =_nbMetal + " / " + Upgrades[_currentUpgradeGoal].NbMetal;
+        CrystalGoal.text = _nbCrystal + " / " + Upgrades[_currentUpgradeGoal].NbCrystal;
     }
 
     public void UpgradeSpaceship()

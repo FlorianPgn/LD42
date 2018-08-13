@@ -10,7 +10,7 @@ public class Jauge : MonoBehaviour
     public float Speed = 0.05f;
     public int MaxValue;
     public int TargetAmount;
-    public bool Warning = true;
+    private bool _warning;
 
     private float _CurrentAmount;
     private float _nextUpdate;
@@ -20,12 +20,7 @@ public class Jauge : MonoBehaviour
         _nextUpdate = Time.time;
         StartCoroutine(UpdateJauge());
         _CurrentAmount = TargetAmount;
-        StartCoroutine(WarnUser());
-    }
-
-    private void Update()
-    {
-        //_targetAmount = Test;
+        StopWarning();
     }
 
     private IEnumerator UpdateJauge()
@@ -44,19 +39,38 @@ public class Jauge : MonoBehaviour
             yield return null;
         }
     }
+
+    public void WarnUser(bool val)
+    {
+        if (val && !_warning)
+        {
+            _warning = val;
+            StartCoroutine(WarnUser());
+        }
+        _warning = val;
+    }
+
     private IEnumerator WarnUser()
     {
-        while (_CurrentAmount > 0)
+        Color newC = Icon.color;
+        while (_warning)
         {
-            Color newC = Icon.color;
             float l1 = -1;
             float h1 = 1;
             float l2 = 0.2f;
-            float h2 = 1;
+            float h2 = 0.6f;
             newC.a = l2 + (Mathf.Sin(Time.time * 5) - l1) * (h2 - l2) / (h1 - l1);
             Icon.color = newC;
             yield return null;
         }
+        StopWarning();
         print("Fin warning");
+    }
+
+    private void StopWarning()
+    {
+        Color newC = Icon.color;
+        newC.a = 0;
+        Icon.color = newC;
     }
 }

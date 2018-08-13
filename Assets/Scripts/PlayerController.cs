@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask GroundMask;
     public LayerMask ClickableMask;
-    
+
 
     private Collider _previousCollider;
 
@@ -74,13 +74,19 @@ public class PlayerController : MonoBehaviour
                 _previousCollider = null;
             }
         }
-        LookAt(_agent.steeringTarget);
+        if(_agent.isStopped)
+        {
+            LookAt(hit.point);
+        }
+        {
+            LookAt(_agent.steeringTarget);
+        }
     }
 
     private void UpdateTargetPosition(Ray ray, out RaycastHit hit)
     {
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, GroundMask) &&  !(Physics.Raycast(ray, Mathf.Infinity, ClickableMask)))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, GroundMask) && !(Physics.Raycast(ray, Mathf.Infinity, ClickableMask)))
         {
             Vector3 intersectPoint = hit.point; // ray.GetPoint(rayDistance);
             Debug.DrawLine(ray.origin, intersectPoint, Color.red);
