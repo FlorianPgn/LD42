@@ -30,7 +30,10 @@ public class AudioManager : MonoBehaviour
                 newMusicSource.transform.parent = transform;
                 _musicSources[i].loop = true;
             }
-            SetVolume(PlayerPrefs.GetFloat("volume"));
+            if (PlayerPrefs.HasKey("volume"))
+            {
+                SetVolume(PlayerPrefs.GetFloat("volume"));
+            }
             DontDestroyOnLoad(this.gameObject);
         }
 

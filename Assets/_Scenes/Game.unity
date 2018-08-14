@@ -2896,7 +2896,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 361308321}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -9.060133, y: -6.000719, z: 0.17999887}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1096535208}
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedColor: {r: 0.5471698, g: 0.33019462, b: 0.29681382, a: 1}
-  PlantationPoint: {fileID: 1625027634}
+  PlantationPoint: {fileID: 722912435}
   PlantTypes:
   - Type: 2
     Plant: {fileID: 114787701367887820, guid: a0ae3d48558c46d49a931efa4f11182c, type: 2}
@@ -3193,7 +3193,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 430208246}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.91985434, z: 0.17999995}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1367092291}
@@ -3292,6 +3292,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 11d4991de772301468b3c6cccd43f311, type: 3}
       propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 11d4991de772301468b3c6cccd43f311, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3582,7 +3586,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499548821}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -9.060133, y: -6.000719, z: 0.17999887}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1681844158}
@@ -3894,7 +3898,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 622833148}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.91985434, z: 0.17999995}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 821349142}
@@ -4971,7 +4975,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 782727647}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -9.060133, y: -6.000719, z: 0.17999887}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830907993}
@@ -5804,6 +5808,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 11d4991de772301468b3c6cccd43f311, type: 3}
       propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 11d4991de772301468b3c6cccd43f311, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6895,8 +6903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedColor: {r: 0.5471698, g: 0.33019462, b: 0.29681382, a: 1}
-  PlantationPoint: {fileID: 4021992017155720, guid: 2c22c422a7ca5064ea34df1d832ffd17,
-    type: 2}
+  PlantationPoint: {fileID: 1625027634}
   PlantTypes:
   - Type: 2
     Plant: {fileID: 114787701367887820, guid: a0ae3d48558c46d49a931efa4f11182c, type: 2}
@@ -9681,7 +9688,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.50000155
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -9761,7 +9768,7 @@ Transform:
   - {fileID: 774160732}
   - {fileID: 1914670343}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1533975176
 Rigidbody:
@@ -10436,7 +10443,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1668133965}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.91985434, z: 0.17999995}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 892741865}
@@ -13389,7 +13396,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2017065015}
-  m_LocalRotation: {x: 0.46589574, y: 0.000000048616243, z: -0.000000025597966, w: 0.88483965}
+  m_LocalRotation: {x: 0.46589574, y: 0.00000004861624, z: -0.000000025597972, w: 0.88483965}
   m_LocalPosition: {x: 0.56856346, y: -1.9081678, z: 1.7148333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13734,6 +13741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147d9cad90358c242add3974b36096e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Running: 0
   CanRun: 1
   Animator: {fileID: 1412292574}
   SelectedColor: {r: 0.69085974, g: 0.7042097, b: 0.7075472, a: 1}
@@ -13780,7 +13788,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2060581344}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -9.060133, y: -6.000719, z: 0.17999887}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1920451353}
@@ -14017,7 +14025,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8f403c0975caa2b4c8199a41fb62f82a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8f403c0975caa2b4c8199a41fb62f82a, type: 3}
       propertyPath: m_Name

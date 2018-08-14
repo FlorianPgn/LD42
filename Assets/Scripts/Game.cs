@@ -104,6 +104,7 @@ public class Game : MonoBehaviour
             {
                 print("Can't pump");
                 _waterFilter.CanRun = false;
+                _waterFilter.Running = false;
                 _needEnergy = true;
                 _pumpWater = false;
             }

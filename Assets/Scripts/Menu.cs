@@ -22,7 +22,11 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         _activeResIndex = PlayerPrefs.GetInt(RES_INDEX);
-        bool isFullscreen = (PlayerPrefs.GetInt(FULLSCREEN) == 1) ? true : false;
+        bool isFullscreen = false;
+        if (PlayerPrefs.HasKey(FULLSCREEN))
+        {
+            isFullscreen = (PlayerPrefs.GetInt(FULLSCREEN) == 1) ? true : false;
+        }
         for (int i = 0; i < resolutionToggles.Length; i++)
         {
             resolutionToggles[i].isOn = i == _activeResIndex;
@@ -30,6 +34,7 @@ public class Menu : MonoBehaviour
         volume.value = AudioManager.instance.GetVolume();
         fullscreenToggle.isOn = isFullscreen;
         SetFullScreen(isFullscreen);
+        MusicManager.instance.PlayMenuTheme();
     }
 
     public void Play()

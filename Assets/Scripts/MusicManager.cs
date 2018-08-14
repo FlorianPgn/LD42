@@ -12,7 +12,6 @@ public class MusicManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         instance = this;
-        AudioManager.instance.PlayMusic(menuTheme, 2);
 	}
 
     public void PlayMainTheme()
