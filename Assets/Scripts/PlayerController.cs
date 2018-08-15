@@ -61,11 +61,19 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetButtonDown("Fire1"))
                 {
                     Collider[] colliders = Physics.OverlapSphere(transform.position, 2f, ClickableMask, QueryTriggerInteraction.Collide);
+                    bool colliderFound = false;
                     foreach (Collider c in colliders)
                     {
                         if (c == currentCollider)
+                        {
                             currentCollider.SendMessage("Select", SendMessageOptions.DontRequireReceiver);
+                            colliderFound = true;
+                        }
 
+                    }
+                    if (!colliderFound)
+                    {
+                        _agent.SetDestination(hit.point);
                     }
                 }
             }
