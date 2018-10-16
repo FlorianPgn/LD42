@@ -3,6 +3,8 @@
 Itch.io link :
 https://zykroma.itch.io/space-creator
 
+![alt text](https://static.jam.vg/raw/a51/21/z/192ac.png)
+
 A game that takes place in space where you need to farm your way to survival.
 You must fully upgrade your spaceship if you want to succeed. Though beware, you might run of oxygen or ever worse, you could forget to turn off the water filter!
 
