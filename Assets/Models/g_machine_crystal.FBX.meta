@@ -1,0 +1,240 @@
+fileFormatVersion: 2
+guid: 5d6dc8f5c7060c644935b2d99b7eb25d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: obj_crystal001
+    100004: obj_crystal002
+    100006: obj_crystal003
+    100008: obj_crystal004
+    100010: obj_crystal005
+    100012: obj_crystal006
+    100014: obj_machine_crystal
+    100016: obj_machine_crystal_bolt_003
+    100018: obj_machine_crystal_bolt_1
+    100020: obj_machine_crystal_bolt_3
+    100022: Object014
+    100024: Object015
+    400000: //RootNode
+    400002: obj_crystal001
+    400004: obj_crystal002
+    400006: obj_crystal003
+    400008: obj_crystal004
+    400010: obj_crystal005
+    400012: obj_crystal006
+    400014: obj_machine_crystal
+    400016: obj_machine_crystal_bolt_003
+    400018: obj_machine_crystal_bolt_1
+    400020: obj_machine_crystal_bolt_3
+    400022: Object014
+    400024: Object015
+    2100000: m_crystal
+    2100002: m_glass
+    2100004: m_energy
+    2100006: m_black
+    2100008: m_gray
+    2300000: obj_crystal001
+    2300002: obj_crystal002
+    2300004: obj_crystal003
+    2300006: obj_crystal004
+    2300008: obj_crystal005
+    2300010: obj_crystal006
+    2300012: obj_machine_crystal
+    2300014: obj_machine_crystal_bolt_003
+    2300016: obj_machine_crystal_bolt_1
+    2300018: obj_machine_crystal_bolt_3
+    2300020: Object014
+    2300022: Object015
+    3300000: obj_crystal001
+    3300002: obj_crystal002
+    3300004: obj_crystal003
+    3300006: obj_crystal004
+    3300008: obj_crystal005
+    3300010: obj_crystal006
+    3300012: obj_machine_crystal
+    3300014: obj_machine_crystal_bolt_003
+    3300016: obj_machine_crystal_bolt_1
+    3300018: obj_machine_crystal_bolt_3
+    3300020: Object014
+    3300022: Object015
+    4300000: obj_crystal004
+    4300002: obj_crystal001
+    4300004: Object014
+    4300006: Object015
+    4300008: obj_crystal002
+    4300010: obj_crystal003
+    4300012: obj_machine_crystal_bolt_003
+    4300014: obj_crystal005
+    4300016: obj_crystal006
+    4300018: obj_machine_crystal_bolt_3
+    4300020: obj_machine_crystal_bolt_1
+    4300022: obj_machine_crystal
+    7400000: Crystalize
+    7400002: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_black
+    second: {fileID: 2100000, guid: 188e84b5a637e204d9c059078db47f98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_crystal
+    second: {fileID: 2100000, guid: 52e1168011af46e4c88e41fda3674d42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_energy
+    second: {fileID: 2100000, guid: d9af69fa693046a48afae24bb338762b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_glass
+    second: {fileID: 2100000, guid: a1e5a694e5242494c85a9f1bf75aae31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_gray
+    second: {fileID: 2100000, guid: 4f46139d0e61b4747a9747a502cd556b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Crystalize
+      takeName: modeling_7
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: modeling_7
+      firstFrame: 119
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
